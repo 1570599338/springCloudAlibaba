@@ -1,0 +1,19 @@
+server:
+          port: 667
+
+spring:
+  application:
+    name: user667
+
+
+  cloud:
+    nacos:
+      server-addr: localhost:8848
+      discovery:
+        server-addr: ${spring.cloud.nacos.server-addr}
+
+management:
+  endpoint:
+    web:
+      exposure:
+        include:*
